@@ -1,0 +1,93 @@
+/* app/globals.css */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #0d233a; /* Azul oscuro elegante para el fondo de toda la página */
+  color: #333;
+}
+
+/* El contenedor ahora ocupa el 90% de la pantalla, en vez de un ancho fijo pequeño */
+.contenedor-principal {
+  max-width: 90%; 
+  margin: 0 auto;
+  padding: 30px 0; /* Un poco más de espacio arriba y abajo */
+}
+
+/* La tarjeta blanca donde van los productos */
+.tarjeta {
+  background: white;
+  padding: 40px; /* Más espacio interno */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra un poco más marcada contra el fondo oscuro */
+}
+
+/* El buscador centrado */
+.contenedor-buscador {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px; /* Más separación con el catálogo */
+}
+
+.barra-busqueda {
+  width: 100%;
+  max-width: 800px; /* La barra de búsqueda también es más ancha ahora */
+  padding: 18px 25px; /* Un poco más alta */
+  border: 2px solid #0056b3;
+  border-radius: 40px; 
+  font-size: 18px; /* Texto un poco más grande */
+  box-shadow: 0 4px 8px rgba(0, 86, 179, 0.15);
+  transition: all 0.3s ease;
+}
+
+.barra-busqueda:focus {
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
+}
+
+/* Grilla para acomodar los productos: las tarjetas serán más grandes */
+.grilla-productos {
+  display: grid;
+  /* El minmax ahora es de 350px, haciendo que cada tarjeta sea más ancha */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Cada producto individual */
+.producto-item {
+  padding: 25px;
+  background: #f8fafc; /* Un gris muuuy clarito para que no sea blanco puro */
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.producto-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-color: #0056b3;
+  background: white; /* Se pone totalmente blanco al pasar el mouse */
+}
+
+.producto-nombre {
+  font-weight: 600;
+  font-size: 20px; /* Nombre del producto más grande */
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.producto-precio {
+  color: #0056b3;
+  font-weight: 800;
+  font-size: 28px; /* Precio más grande */
+}
+
+.mensaje-vacio {
+  text-align: center;
+  color: #64748b;
+  font-size: 20px;
+  padding: 50px;
+  grid-column: 1 / -1;
+}
